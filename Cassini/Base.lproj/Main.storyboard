@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,17 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-Np-Iag">
-                                <rect key="frame" x="80" y="76" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-VC-QVG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eQ4-VC-QVG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GVC-vd-xOL"/>
+                            <constraint firstItem="eQ4-VC-QVG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VKv-72-dej"/>
+                            <constraint firstAttribute="trailing" secondItem="eQ4-VC-QVG" secondAttribute="trailing" id="sW5-LW-uCa"/>
+                            <constraint firstItem="eQ4-VC-QVG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="seR-jY-rTl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="eQ4-VC-QVG" id="ZCi-7U-I95"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="63.418290854572717"/>
         </scene>
     </scenes>
 </document>
