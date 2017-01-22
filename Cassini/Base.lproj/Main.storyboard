@@ -91,11 +91,17 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-VC-QVG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-LH-iPS">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eQ4-VC-QVG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GVC-vd-xOL"/>
                             <constraint firstItem="eQ4-VC-QVG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VKv-72-dej"/>
+                            <constraint firstItem="i7T-LH-iPS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fpy-Da-02r"/>
+                            <constraint firstItem="i7T-LH-iPS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSW-eB-TG0"/>
                             <constraint firstAttribute="trailing" secondItem="eQ4-VC-QVG" secondAttribute="trailing" id="sW5-LW-uCa"/>
                             <constraint firstItem="eQ4-VC-QVG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="seR-jY-rTl"/>
                         </constraints>
@@ -103,6 +109,7 @@
                     <navigationItem key="navigationItem" id="R6n-PC-6zm"/>
                     <connections>
                         <outlet property="scrollView" destination="eQ4-VC-QVG" id="ZCi-7U-I95"/>
+                        <outlet property="spinner" destination="i7T-LH-iPS" id="xmi-tB-QZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
